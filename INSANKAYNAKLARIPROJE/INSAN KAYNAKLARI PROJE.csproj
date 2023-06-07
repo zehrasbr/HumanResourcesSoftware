@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E154E97D-8354-4CF8-B657-6602BAF0E7E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>INSANKAYNAKLARIPROJE</RootNamespace>
+    <AssemblyName>INSANKAYNAKLARIPROJE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\BasvuruGoruntulePencere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BasvuruGoruntulePencere.Designer.cs">
+      <DependentUpon>BasvuruGoruntulePencere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BasvuruGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BasvuruGuncelle.Designer.cs">
+      <DependentUpon>BasvuruGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BasvuruYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BasvuruYap.Designer.cs">
+      <DependentUpon>BasvuruYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinGoruntulePencere2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinGoruntulePencere2.Designer.cs">
+      <DependentUpon>IzinGoruntulePencere2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinleriGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinleriGoruntule.Designer.cs">
+      <DependentUpon>IzinleriGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuRaporlamaIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuRaporlamaIslemleri.Designer.cs">
+      <DependentUpon>MenuRaporlamaIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuMuhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuMuhasebe.Designer.cs">
+      <DependentUpon>MenuMuhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelGuncelle.Designer.cs">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TakvimProjeEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TakvimProjeEkleme.Designer.cs">
+      <DependentUpon>TakvimProjeEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TakvimProjeTarihler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TakvimProjeTarihler.Designer.cs">
+      <DependentUpon>TakvimProjeTarihler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlBlank2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlBlank2.Designer.cs">
+      <DependentUpon>UserControlBlank2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlDays2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlDays2.Designer.cs">
+      <DependentUpon>UserControlDays2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IsIlaniPencere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IsIlaniPencere.Designer.cs">
+      <DependentUpon>IsIlaniPencere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinGoruntulePencere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinGoruntulePencere.Designer.cs">
+      <DependentUpon>IzinGoruntulePencere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuBasvuruIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuBasvuruIslemleri.Designer.cs">
+      <DependentUpon>MenuBasvuruIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BasvurulariGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BasvurulariGoruntule.Designer.cs">
+      <DependentUpon>BasvurulariGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BasvuruOnayIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BasvuruOnayIslemleri.Designer.cs">
+      <DependentUpon>BasvuruOnayIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IsIlaniVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IsIlaniVer.Designer.cs">
+      <DependentUpon>IsIlaniVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IsIlanlariniGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IsIlanlariniGoruntule.Designer.cs">
+      <DependentUpon>IsIlanlariniGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinEkle.Designer.cs">
+      <DependentUpon>IzinEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinOnayIslemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinOnayIslemi.Designer.cs">
+      <DependentUpon>IzinOnayIslemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuDepartmanIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuDepartmanIslemleri.Designer.cs">
+      <DependentUpon>MenuDepartmanIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuIzinYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuIzinYonetimi.Designer.cs">
+      <DependentUpon>MenuIzinYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuPersonel.Designer.cs">
+      <DependentUpon>MenuPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuProjeToplantı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuProjeToplantı.Designer.cs">
+      <DependentUpon>MenuProjeToplantı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuSirketBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuSirketBilgileri.Designer.cs">
+      <DependentUpon>MenuSirketBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TakvimToplantiEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TakvimToplantiEkleme.Designer.cs">
+      <DependentUpon>TakvimToplantiEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelGoruntulePencere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelGoruntulePencere.Designer.cs">
+      <DependentUpon>PersonelGoruntulePencere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TakvimToplantiTarihler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TakvimToplantiTarihler.Designer.cs">
+      <DependentUpon>TakvimToplantiTarihler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuPuantaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuPuantaj.Designer.cs">
+      <DependentUpon>MenuPuantaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuSirketHakkında.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuSirketHakkında.Designer.cs">
+      <DependentUpon>MenuSirketHakkında.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelGoruntule.Designer.cs">
+      <DependentUpon>PersonelGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelSil.Designer.cs">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinSil.Designer.cs">
+      <DependentUpon>IzinSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IzinGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IzinGuncelle.Designer.cs">
+      <DependentUpon>IzinGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MuhasebeGörüntüle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MuhasebeGörüntüle.Designer.cs">
+      <DependentUpon>MuhasebeGörüntüle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MuhasebeOdemeYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MuhasebeOdemeYap.Designer.cs">
+      <DependentUpon>MuhasebeOdemeYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MuhasebeOdemeYap2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MuhasebeOdemeYap2.Designer.cs">
+      <DependentUpon>MuhasebeOdemeYap2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsanKaynaklariProjesiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsanKaynaklariProjesiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\PuantajGoruntulePencere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PuantajGoruntulePencere.Designer.cs">
+      <DependentUpon>PuantajGoruntulePencere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="Forms\UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlDays.Designer.cs">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor2.cs" />
+    <Compile Include="Forms\FrmYetki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYetki.Designer.cs">
+      <DependentUpon>FrmYetki.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\BasvuruGoruntulePencere.resx">
+      <DependentUpon>BasvuruGoruntulePencere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BasvuruGuncelle.resx">
+      <DependentUpon>BasvuruGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BasvuruYap.resx">
+      <DependentUpon>BasvuruYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinGoruntulePencere2.resx">
+      <DependentUpon>IzinGoruntulePencere2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinleriGoruntule.resx">
+      <DependentUpon>IzinleriGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuRaporlamaIslemleri.resx">
+      <DependentUpon>MenuRaporlamaIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuMuhasebe.resx">
+      <DependentUpon>MenuMuhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IsIlaniPencere.resx">
+      <DependentUpon>IsIlaniPencere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinGoruntulePencere.resx">
+      <DependentUpon>IzinGoruntulePencere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuBasvuruIslemleri.resx">
+      <DependentUpon>MenuBasvuruIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BasvurulariGoruntule.resx">
+      <DependentUpon>BasvurulariGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BasvuruOnayIslemleri.resx">
+      <DependentUpon>BasvuruOnayIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IsIlaniVer.resx">
+      <DependentUpon>IsIlaniVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IsIlanlariniGoruntule.resx">
+      <DependentUpon>IsIlanlariniGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinEkle.resx">
+      <DependentUpon>IzinEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinOnayIslemi.resx">
+      <DependentUpon>IzinOnayIslemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuDepartmanIslemleri.resx">
+      <DependentUpon>MenuDepartmanIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuIzinYonetimi.resx">
+      <DependentUpon>MenuIzinYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuPersonel.resx">
+      <DependentUpon>MenuPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuProjeToplantı.resx">
+      <DependentUpon>MenuProjeToplantı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuSirketBilgileri.resx">
+      <DependentUpon>MenuSirketBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelGuncelle.resx">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TakvimProjeEkleme.resx">
+      <DependentUpon>TakvimProjeEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TakvimToplantiEkleme.resx">
+      <DependentUpon>TakvimToplantiEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelGoruntulePencere.resx">
+      <DependentUpon>PersonelGoruntulePencere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TakvimProjeTarihler.resx">
+      <DependentUpon>TakvimProjeTarihler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TakvimToplantiTarihler.resx">
+      <DependentUpon>TakvimToplantiTarihler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuPuantaj.resx">
+      <DependentUpon>MenuPuantaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuSirketHakkında.resx">
+      <DependentUpon>MenuSirketHakkında.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelGoruntule.resx">
+      <DependentUpon>PersonelGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlBlank2.resx">
+      <DependentUpon>UserControlBlank2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlDays2.resx">
+      <DependentUpon>UserControlDays2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelSil.resx">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinSil.resx">
+      <DependentUpon>IzinSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IzinGuncelle.resx">
+      <DependentUpon>IzinGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MuhasebeGörüntüle.resx">
+      <DependentUpon>MuhasebeGörüntüle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MuhasebeOdemeYap.resx">
+      <DependentUpon>MuhasebeOdemeYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MuhasebeOdemeYap2.resx">
+      <DependentUpon>MuhasebeOdemeYap2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PuantajGoruntulePencere.resx">
+      <DependentUpon>PuantajGoruntulePencere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYetki.resx">
+      <DependentUpon>FrmYetki.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="InsanKaynaklariProjesiDataSet.xsc">
+      <DependentUpon>InsanKaynaklariProjesiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsanKaynaklariProjesiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsanKaynaklariProjesiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsanKaynaklariProjesiDataSet.xss">
+      <DependentUpon>InsanKaynaklariProjesiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aikaltd.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\humanresources.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kullanıcı.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\şifre.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\takvimm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaydet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profits.png" />
+    <None Include="Resources\budget.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\evaluation.png" />
+    <None Include="Resources\data-security.png" />
+    <None Include="Resources\police-station.png" />
+    <None Include="Resources\company.png" />
+    <None Include="Resources\shopping-mall.png" />
+    <None Include="Resources\desk.png" />
+    <None Include="Resources\information-management.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\adress.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\humanresources1.JPG" />
+    <None Include="Resources\workers.png" />
+    <None Include="Resources\human %281%29.png" />
+    <None Include="Resources\manager.png" />
+    <None Include="Resources\application.png" />
+    <None Include="Resources\resume.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\feature-selection.png" />
+    <None Include="Resources\interview.png" />
+    <None Include="Resources\application %281%29.png" />
+    <None Include="Resources\evaluation %281%29.png" />
+    <None Include="Resources\carnet.png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\party.png" />
+    <None Include="Resources\pie-chart.png" />
+    <None Include="Resources\spam.png" />
+    <None Include="Resources\vote.png" />
+    <None Include="Resources\email-marketing.png" />
+    <None Include="Resources\newspaper.png" />
+    <None Include="Resources\budget %281%29.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\info %281%29.png" />
+    <None Include="Resources\accounting %282%29.png" />
+    <None Include="Resources\touchscreen.png" />
+    <None Include="Resources\workshop.png" />
+    <None Include="Resources\presentation.png" />
+    <None Include="Resources\meeting.png" />
+    <None Include="Resources\planning.png" />
+    <None Include="Resources\project %282%29.png" />
+    <None Include="Resources\research.png" />
+    <None Include="Resources\job-promotion.png" />
+    <None Include="Resources\translate.png" />
+    <None Include="Resources\button.png" />
+    <None Include="Resources\sifre.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %282%29.png" />
+    <None Include="Resources\calendar %282%291.png" />
+    <None Include="Resources\personal-information.png" />
+    <None Include="Resources\static.png" />
+    <None Include="Resources\salary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+    <None Include="Resources\contact-us.png" />
+    <None Include="Resources\languages.png" />
+    <None Include="Resources\experience.png" />
+    <None Include="Resources\education.png" />
+    <None Include="Resources\add-user.png" />
+    <None Include="Resources\update %281%29.png" />
+    <None Include="Resources\delete %281%29.png" />
+    <None Include="Resources\profits %281%29.png" />
+    <None Include="Resources\accounting %283%29.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\bonus.png" />
+    <None Include="Resources\teamwork.png" />
+    <None Include="Resources\leader.png" />
+    <None Include="Resources\visa.png" />
+    <None Include="Resources\permissions.png" />
+    <None Include="Resources\growth.png" />
+    <None Include="Resources\speedometer.png" />
+    <None Include="Resources\result.png" />
+    <None Include="Resources\team %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Veri Tabanı\InsanKaynaklariProjesi.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Veri Tabanı\InsanKaynaklariProjesi_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\download.png" />
+    <None Include="Resources\arrow1.png" />
+    <None Include="Resources\hand-cursor1.png" />
+    <None Include="Resources\permission.png" />
+    <None Include="Resources\heat-press.png" />
+    <None Include="Resources\printer %283%29.png" />
+    <None Include="Resources\poster.png" />
+    <None Include="Resources\pdf %281%29.png" />
+    <None Include="Resources\resume %281%29.png" />
+    <None Include="Resources\approve.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\pdf.png" />
+    <Content Include="Resources\logo.png" />
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\pdf-document.png" />
+    <None Include="Resources\printer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55-error-outline %281%29.gif" />
+    <None Include="Resources\58-call-phone-outline.gif" />
+    <None Include="Resources\33-speed-outline %281%29.gif" />
+    <None Include="Resources\39-trash-outline.gif" />
+    <None Include="Resources\17-assignment-outline %281%29.gif" />
+    <None Include="Resources\34-code-outline.gif" />
+    <None Include="Resources\34-code-outline1.gif" />
+    <None Include="Resources\phone.gif" />
+    <None Include="Resources\skyline.gif" />
+    <None Include="Resources\email.gif" />
+    <None Include="Resources\user.gif" />
+    <None Include="Resources\quiz.gif" />
+    <None Include="Resources\vlogger %281%29.gif" />
+    <None Include="Resources\vlogger.gif" />
+    <None Include="Resources\file1.png" />
+    <None Include="Resources\calendar.gif" />
+    <None Include="Resources\selection.gif" />
+    <None Include="Resources\add-image.gif" />
+    <None Include="Resources\add-file.gif" />
+    <None Include="Resources\update.gif" />
+    <None Include="Resources\bin.gif" />
+    <None Include="Resources\map.gif" />
+    <None Include="Resources\line-chart.gif" />
+    <None Include="Resources\56-warning-outline.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary %281%29.png" />
+    <None Include="Resources\reject.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\two-rounded-equal-squares-outlines-symbol.png" />
+    <None Include="Resources\new-file.png" />
+    <None Include="Resources\work.gif" />
+    <None Include="Resources\marriage-certificate.gif" />
+    <None Include="Resources\diploma.gif" />
+    <None Include="Resources\more %281%29.png" />
+    <None Include="Resources\translation.gif" />
+    <None Include="Resources\mortarboard.gif" />
+    <None Include="Resources\graduation-cap.png" />
+    <None Include="Resources\information %281%29.gif" />
+    <None Include="Resources\chat.gif" />
+    <None Include="Resources\phone %281%29.gif" />
+    <None Include="Resources\refresh %281%29.png" />
+    <None Include="Resources\delete %282%29.png" />
+    <None Include="Resources\language.png" />
+    <None Include="Resources\delete %283%29.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
