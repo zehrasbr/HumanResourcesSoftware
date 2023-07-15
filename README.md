@@ -7,3 +7,4 @@ User Login
 TC Kimlik No:22222222222
 Password:1234
 ![image](https://github.com/zehrasbr/human-resources-software/assets/120209419/6d597762-7c6b-4547-ba08-bfedee1f7102)
+![image](https://github.com/zehrasbr/human-resources-software/assets/120209419/db6f8761-705a-41b7-ac45-9377071716c2)
