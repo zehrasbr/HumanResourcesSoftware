@@ -1,5 +1,8 @@
-# human-resources-software
-Human resources software that I created using C# Visual studio windows form.
+HUMAN RESOURCES SOFTWARE
+It can manage issues such as personnel management, recruitment process, performance evaluations, training
+tracking, leave requests, salary information, performance goals and career development for employers.
+Technologies I Use: Windows Form App. , C#, MSSQL.
+
 Admin Login
 TC Kimlik No:11111111111 
 Password:1234
